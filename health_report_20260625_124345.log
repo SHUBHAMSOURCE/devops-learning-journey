@@ -1,0 +1,50 @@
+========================================
+  SERVER HEALTH REPORT
+  Generated: 2026-06-25 12:43:45
+========================================
+
+DISK USAGE:
+Filesystem                                        Size  Used Avail Use% Mounted on
+tmpfs                                             1.6G  3.8M  1.6G   1% /run
+rpool/ROOT/ubuntu_5v91fl                          194G  7.1G  187G   4% /
+rpool/ROOT/ubuntu_5v91fl/srv                      187G  128K  187G   1% /srv
+rpool/ROOT/ubuntu_5v91fl/usr/local                187G  250M  187G   1% /usr/local
+rpool/ROOT/ubuntu_5v91fl/var/games                187G  128K  187G   1% /var/games
+rpool/ROOT/ubuntu_5v91fl/var/lib                  203G   17G  187G   8% /var/lib
+rpool/ROOT/ubuntu_5v91fl/var/lib/AccountsService  187G  128K  187G   1% /var/lib/AccountsService
+rpool/ROOT/ubuntu_5v91fl/var/lib/NetworkManager   187G  256K  187G   1% /var/lib/NetworkManager
+rpool/ROOT/ubuntu_5v91fl/var/lib/apt              187G   89M  187G   1% /var/lib/apt
+rpool/ROOT/ubuntu_5v91fl/var/lib/dpkg             187G   42M  187G   1% /var/lib/dpkg
+rpool/ROOT/ubuntu_5v91fl/var/log                  187G   46M  187G   1% /var/log
+rpool/ROOT/ubuntu_5v91fl/var/mail                 187G  128K  187G   1% /var/mail
+rpool/ROOT/ubuntu_5v91fl/var/snap                 187G  2.5M  187G   1% /var/snap
+rpool/ROOT/ubuntu_5v91fl/var/spool                187G  128K  187G   1% /var/spool
+rpool/ROOT/ubuntu_5v91fl/var/www                  187G   22M  187G   1% /var/www
+tmpfs                                             7.7G  849M  6.9G  11% /dev/shm
+tmpfs                                             5.0M  8.0K  5.0M   1% /run/lock
+efivarfs                                          246K  102K  140K  43% /sys/firmware/efi/efivars
+rpool/USERDATA/root_vz7sli                        187G  256K  187G   1% /root
+rpool/USERDATA/home_vz7sli                        198G   12G  187G   6% /home
+rpool/var/lib/docker                              189G  2.5G  187G   2% /var/lib/docker
+bpool/BOOT/ubuntu_5v91fl                          1.8G  292M  1.5G  17% /boot
+/dev/nvme0n1p1                                    1.1G  6.2M  1.1G   1% /boot/efi
+tmpfs                                             1.6G  176K  1.6G   1% /run/user/1000
+
+MEMORY USAGE (MB):
+               total        used        free      shared  buff/cache   available
+Mem:           15711       14330         522        1703        3047        1381
+Swap:           4095        3032        1063
+
+TOP 5 CPU-CONSUMING PROCESSES:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+cbrn001  2580680  500  0.0  12828  4772 pts/4    R+   12:43   0:00 ps aux --sort=-%cpu
+cbrn001  2580650 14.2  0.0   7400  3020 pts/4    S+   12:43   0:00 /bin/bash ./health_check.sh
+cbrn001  2541705  2.7  4.8 1519006896 776784 ?   Sl   11:31   2:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=2469658 --enable-crash-reporter=9eb75711-3cd3-4b16-adb4-dbeb214fb33d, --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=206 --time-ticks-at-unix-epoch=-1781970707504617 --launch-time-ticks=338719674962 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,13669896613929898194,12927729028330968700,2097152 --field-trial-handle=3,i,12272614554588147882,5606195109067410965,262144 --disable-features=EyeDropper --variations-seed-version=20260624-010038.063000-production --pseudonymization-salt-handle=7,i,7916000259841448980,11984111500458945442,4 --trace-process-track-uuid=3190709179342492388
+cbrn001     3958  1.6  1.6 5050472 270264 ?      Ssl  Jun08 396:54 /usr/bin/gnome-shell
+cbrn001  2470626  1.3  1.7 1518872908 286788 ?   Sl   Jun24  15:27 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=2469658 --enable-crash-reporter=9eb75711-3cd3-4b16-adb4-dbeb214fb33d, --change-stack-guard-on-fork=enable --ozone-platform=wayland --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=86 --time-ticks-at-unix-epoch=-1781970707504617 --launch-time-ticks=330688378183 --shared-files=v8_context_snapshot_data:100 --metrics-shmem-handle=4,i,2488913698887928648,1205999158442098347,2097152 --field-trial-handle=3,i,12272614554588147882,5606195109067410965,262144 --disable-features=EyeDropper --variations-seed-version=20260624-010038.063000-production --pseudonymization-salt-handle=7,i,7916000259841448980,11984111500458945442,4 --trace-process-track-uuid=3190709066897470508
+
+NETWORK CONNECTIVITY:
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 32.975/82.247/131.519/49.272 ms
+
+Report saved to: health_report_20260625_124345.log

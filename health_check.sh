@@ -39,4 +39,8 @@ echo "NETWORK CONNECTIVITY:" | tee -a $LOG_FILE
 ping -c 2 google.com | tail -2 | tee -a $LOG_FILE
 
 echo "" | tee -a $LOG_FILE
+# --- UPTIME ---
+echo "" | tee -a $LOG_FILE
+echo "SYSTEM UPTIME:" | tee -a $LOG_FILE
+uptime | tee -a $LOG_FILE
 echo "Report saved to: $LOG_FILE" | tee -a $LOG_FILE

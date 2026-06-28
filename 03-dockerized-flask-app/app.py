@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 import datetime
 import os
 
-app = Flaskk(__name__)
+app = Flask(__name__)
 
 @app.route("/")
 def home():

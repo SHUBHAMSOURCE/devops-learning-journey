@@ -1,0 +1,33 @@
+name: CI Pipeline - Flask App
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t flask-app ./03-dockerized-flask-app
+
+      - name: Run container
+        run: docker run -d -p 5001:5000 --name test-flask flask-app
+
+      - name: Wait for app to start
+        run: sleep 3
+
+      - name: Test root endpoint
+        run: curl --fail http://localhost:5001
+
+      - name: Test health endpoint
+        run: curl --fail http://localhost:5001/health
+
+      - name: Show container logs
+        run: docker logs test-flask
